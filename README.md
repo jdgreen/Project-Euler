@@ -12,7 +12,7 @@ Completed solutions:
 
 Python: [1-28]
 
-C: 	[1-13]  (excluding 8,11)
+C: 	[1-13]  excluding 8,11
 
 Java: 	Currently learning the language
 
