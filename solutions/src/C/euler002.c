@@ -1,19 +1,22 @@
 #include <stdio.h>
 
-int main()
-{
-	int i;
-	int nat=0,sqr=0;
-	int diff;
+// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-	for(i = 1; i <= 100; i++)
-	{
-		nat += i*i;
-		sqr += i;
+#define MAX 4000000
+
+int main(int argc, char const *argv[])
+{
+	//variables
+	int fib1=1, fib2=1, tot=0;
+
+	while(fib2 <= MAX){
+		// Iterate Fibonacci
+		fib2 += fib1;
+		fib1 = fib2 - fib1;
+
+		// Summate even numbers
+		tot += ( fib1%2 == 0 ) ? fib1 : 0;
 	}
-	printf("%d\n",nat);
-	printf("%d\n",sqr*sqr);
-	diff = sqr*sqr-nat;
-	printf("%d\n",diff);
+	printf("%d\n", tot);
 	return 0;
 }
