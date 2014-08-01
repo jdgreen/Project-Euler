@@ -1,26 +1,22 @@
 #include <stdio.h>
 
-int main()
-{
-	int i=2;
-	long int sum[400000]={400000, 0};
-	sum[0] = 1;
-	sum[1] = 2;
-	long int tot = 2;
+//Find the sum of all the multiples of 3 or 5 below 1000.
 
-	while(sum[i] < 4000000)
-	{
-		sum[i] = sum[i-1] + sum[i-2];
-		if(sum[i] > 4000000)
-		{
-			 break;
-		}
-		if(sum[i] % 2 == 0 ) {
-			tot += sum[i];
-		}
-		i++;
+int main(int argc, char const *argv[])
+{
+	int tot=0;
+	for ( int i=1 ; i<1000 ; i++){
+		tot += ( i % 3 && i % 5 ) ? 0 : i;
 	}
 
-	printf("%ld ",tot);
+// alternate method	
+/*	for( i=1; i<1000; i++){
+		if( (i % 3 && i % 5) == 0 ){
+			tot += i;
+		}
+	}*/
+
+	printf("%d\n", tot);
+
 	return 0;
 }
