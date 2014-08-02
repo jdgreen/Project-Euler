@@ -1,42 +1,38 @@
 #include <stdio.h>
 #include <math.h>
 
-#define NUMBER 600851475143
+// What is the largest prime factor of the number 600851475143
 
-int isPrime(int test)
+#define NUM 600851475143
+
+// prime number checker with boolean output
+
+int prime(int num)
 {
-    int i=0;
-    int calculateTo=( (int) sqrt(test) );
-
-    for(i = 3; i <= calculateTo; i+=2)
-    {
-        if(test % i == 0)
-        {
-            return 0;
-        }
-    }
-    return 1;
+	for(int i=(int) sqrt(num); i>1; i--){
+		if(num % i == 0) return 0;
+	}
+	return 1;
 }
 
-int main()
+// prime factors
+int main(int argc, char const *argv[])
 {
-    int highest=0;
-    int i=0;
+	//define dynamical variable max
+	long max = NUM;
+	int fact;
 
-    while(1)
-    {
-        for(i=3; ; i+=2)
-        {
-            if(isPrime(i))
-            {
-                if(NUMBER%i==0)
-                    highest=i;
-                if(i>=(sqrt(NUMBER)))
-                    goto END;
-            }
-        }
-    }
-    END:
-    printf("%d", highest);
-    return 0;
+	// start with smallest prime factors and work up until max is prime
+	for(int i=2; i<(int) sqrt(NUM); i++){
+		// check whether the divisor is prime
+		if( prime(i) == 0 ) continue;
+
+		// divide through max with divisor and set current highest factor
+		while(max % i == 0){
+			max /= i; 
+			fact = i;
+		}
+	}
+	printf("%d\n", fact);
+	return 0;
 }
