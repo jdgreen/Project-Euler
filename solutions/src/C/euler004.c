@@ -10,7 +10,7 @@
 
 #define LINE "___________________________"
 #define TITLE "Project Euler: Problem #4"
-#define AUTHOR "Jonathan Green"
+#define AUTHOR "Green"
 #define PROB "Find the largest \n \t palindrome made from the \n \t product of two 3-digit \n \t numbers."
 #define PALIN 9001099
 #define DIGITS 3
