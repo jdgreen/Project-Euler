@@ -4,7 +4,7 @@
 
 // Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-#define FILENAME "Development/euler/data/euler008.data"
+#define FILENAME "/home/jonathan/Development/euler/data/euler008.data"
 #define NUM_DIG 1000
 #define CNT_DIG 13
 
@@ -18,6 +18,7 @@ int base_num( int num){
 	return num-(diff-1)*10;
 }
 
+//note this method below is used because the resultant product is too long to store as an int in C.
 int main()
 {
 	//declare file pointer and open it
