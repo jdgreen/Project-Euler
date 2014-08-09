@@ -18,6 +18,5 @@ int main(int argc, char const *argv[])
 	}
 	a++; b++;
 	printf("%d\n", a*b*(1000-a-b));
-
 	return 0;
 }
