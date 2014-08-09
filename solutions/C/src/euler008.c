@@ -4,7 +4,7 @@
 
 // Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-#define FILENAME ""
+#define FILENAME "/homedir/Development/euler/data/euler008.data"
 #define NUM_DIG 1000
 #define CNT_DIG 13
 
